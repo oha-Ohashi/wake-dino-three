@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts",
-    "dev2": "deno run --watch --allow-net --allow-read --allow-write main2.ts"
+    "dev": "deno run --watch main3.ts",
+    "dev2": "deno run --watch --allow-net --allow-read --allow-write --unstable-kv main3.ts",
+    "dev3": "deno run --watch --allow-net --allow-read --allow-write --unstable-kv kvtest1.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"

@@ -1,8 +1,21 @@
 {
-  "data": [
+  "result": "success",
+  "content": [
     {
-      "name": "ota",
+      "name": "alice",
       "type": "morning",
+      "wake": "-",
+      "depart": "o",
+      "commute code": "-",
+      "buzzer status": "-",
+      "call time": "-",
+      "response time": "-",
+      "last login": "-",
+      "last ping": "-"
+    },
+    {
+      "name": "bob",
+      "type": "night",
       "wake": "-",
       "depart": "-",
       "commute code": "-",
@@ -13,45 +26,9 @@
       "last ping": "-"
     },
     {
-      "name": "okada",
-      "type": "morning",
-      "wake": "-",
-      "depart": "-",
-      "commute code": "-",
-      "buzzer status": "-",
-      "call time": "-",
-      "response time": "-",
-      "last login": "-",
-      "last ping": "-"
-    },
-    {
-      "name": "wakasugi",
-      "type": "morning",
-      "wake": "-",
-      "depart": "-",
-      "commute code": "-",
-      "buzzer status": "-",
-      "call time": "-",
-      "response time": "-",
-      "last login": "-",
-      "last ping": "-"
-    },
-    {
-      "name": "tanaka",
-      "type": "morning",
-      "wake": "-",
-      "depart": "-",
-      "commute code": "-",
-      "buzzer status": "-",
-      "call time": "-",
-      "response time": "-",
-      "last login": "-",
-      "last ping": "-"
-    },
-    {
-      "name": "dummy",
-      "type": "morning",
-      "wake": "-",
+      "name": "charlie",
+      "type": "onboard",
+      "wake": "11111111111",
       "depart": "-",
       "commute code": "-",
       "buzzer status": "-",
