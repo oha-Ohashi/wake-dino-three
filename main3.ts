@@ -36,14 +36,20 @@ const handler = async (req: Request): Promise<Response> => {
         return new Response(
             JSON.stringify(jsonResponse),
             {
-                headers: { "Content-Type": "application/json" },
+                headers: {
+					"Content-Type": "application/json",
+					"access-control-allow-origin": "*"
+				},
             }
         );
     } catch (error) {
         return new Response(
             JSON.stringify({ "result": "error" }),
             {
-                headers: { "Content-Type": "application/json" },
+                headers: {
+					"Content-Type": "application/json",
+					"access-control-allow-origin": "*"
+				},
                 status: 500
             }
         );
