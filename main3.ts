@@ -76,20 +76,29 @@ export let acceptParams = async (
 		else if (argValue === "right"){
 			await updateCell(argName, "depart", '-');
 		}
-		else if (argValue === "onboard"){
+		else if (argValue.includes("onboard")){
 			await updateCell(argName, "type", 'onboard');
+			await updateCell(argName, "due date", '在隊');
 			await updateCell(argName, "wake", '-');
 			await updateCell(argName, "depart", '-');
+			await updateCell(argName, "arrive", '-');
+			await updateCell(argName, "commute code", 'lime');
 		}
-		else if (argValue === "night"){
+		else if (argValue.includes("夜")){
 			await updateCell(argName, "type", 'night');
+			await updateCell(argName, "due date", argValue.split('_')[0]);
 			await updateCell(argName, "wake", '-');
-			await updateCell(argName, "depart", '-');
+			await updateCell(argName, "depart", '[未]');
+			await updateCell(argName, "arrive", '[未]');
+			await updateCell(argName, "commute code", 'red');
 		}
-		else if (argValue === "morning"){
+		else if (argValue.includes("朝")){
 			await updateCell(argName, "type", 'morning');
-			await updateCell(argName, "wake", '-');
-			await updateCell(argName, "depart", '-');
+			await updateCell(argName, "due date", argValue.split('_')[0]);
+			await updateCell(argName, "wake", '[未]');
+			await updateCell(argName, "depart", '[未]');
+			await updateCell(argName, "arrive", '[未]');
+			await updateCell(argName, "commute code", 'gray');
 		}
 		else if (argValue === "a"){
 			await updateCell(argName, "wake", 'AAAAAAAAAAA');
@@ -97,6 +106,18 @@ export let acceptParams = async (
 		else if (argValue === "b"){
 			await updateCell(argName, "depart", 'BBBBBBBBBB');
 		}
+	}
+	else if (argMode === "wake"){
+		await updateCell(argName, "wake", argValue)
+		await updateCell(argName, "commute code", 'red');
+	}
+	else if (argMode === "depart"){
+		await updateCell(argName, "depart", argValue)
+		await updateCell(argName, "commute code", 'yellow');
+	}
+	else if (argMode === "arrive"){
+		await updateCell(argName, "arrive", argValue)
+		await updateCell(argName, "commute code", 'lime');
 	}
 
 

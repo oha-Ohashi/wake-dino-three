@@ -4,8 +4,10 @@
     {
       "name": "alice",
       "type": "morning",
+      "due date": "-",
       "wake": "-",
       "depart": "o",
+      "arrive": "-",
       "commute code": "-",
       "buzzer status": "-",
       "call time": "-",
@@ -16,8 +18,10 @@
     {
       "name": "bob",
       "type": "night",
+      "due date": "-",
       "wake": "-",
       "depart": "-",
+      "arrive": "-",
       "commute code": "-",
       "buzzer status": "-",
       "call time": "-",
@@ -28,8 +32,10 @@
     {
       "name": "charlie",
       "type": "onboard",
+      "due date": "-",
       "wake": "11111111111",
       "depart": "-",
+      "arrive": "-",
       "commute code": "-",
       "buzzer status": "-",
       "call time": "-",
